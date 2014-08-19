@@ -18,17 +18,23 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 define({
     load: function (name, req, onload, config) {
-    	var blocksPath = config.modules && config.modules.block && config.modules.block.path ? config.modules.block.path : 'blocks',
-    		pathArray = name.split('/');
-    	var newName = blocksPath + '/';
+        var blocksPath = config.modules && config.modules.block && config.modules.block.path ? config.modules.block.path : 'blocks',
+            pathArray = name.split('/');
+        var newName = blocksPath + '/',
+            fname = '';
 
-    	for(var i = 0;i<pathArray.length;i++) {
-    		newName += pathArray[i].charAt(0).toUpperCase();
-            newName += pathArray[i].slice(1);
-    		newName += '/';
-    	}
+        for(var i = 0;i<pathArray.length;i++) {
+            newName += pathArray[i];
+            newName += '/';
 
-    	newName += name;
+            if(i > 0) {
+                fname += pathArray[i].charAt(0).toUpperCase() + pathArray[i].slice(1);
+            } else {
+                fname += pathArray[i];
+            }
+        }
+
+        newName += fname;
 
         //req has the same API as require().
         req([newName], function (value) {

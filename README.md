@@ -31,6 +31,20 @@ define(['block!head/__navigation'], NavigationView);
 ```
 
 These would create next path to navigation blocks with path 'blocks/head/navigation/head__navigation'. 
+
+####Textblock
+To load text files with shown before name convention you can use `textblock!`. Warning! Textblock depends on text plugin: https://github.com/requirejs/text
+
+####Require textblock
+```javascript
+var NavigationTemplate = require('block!head/__navigation.html');
+```
+
+Or equivalent:
+```javascript
+define(['block!head/__navigation.html'], NavigationTemplate);
+```
+
 ###Licence
 Requirejs block
 

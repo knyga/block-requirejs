@@ -2,7 +2,9 @@
 Requirejs block plugin allows you to write pathes to required elements without duplication of names in path. It may be useful in combination with BEM methodology: http://bem.info
 
 Without this plugin you would write path like that: `views/blocks/header/__navigation/__search/header__navigation__search` or `views/blocks/header/navigation/search/headerNavigationSearch`.
-But now you can do as follows: `block!header/navigation/search` to get `views/blocks/header/navigation/search/headerNavigationSearch`. And `block!header/__navigation/__search` to get `views/blocks/header/__navigation/__search/header__navigation__search`.
+
+But now you can do as follows: `block!header/navigation/search` to get `views/blocks/header/navigation/search/headerNavigationSearch`.
+And `block!header/__navigation/__search` to get `views/blocks/header/__navigation/__search/header__navigation__search`.
 
 ####Congurate
 ```javascript

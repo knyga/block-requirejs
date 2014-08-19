@@ -7,7 +7,7 @@ But now you can do as follows: `block!header/navigation/search` to get `views/bl
 
 And `block!header/__navigation/__search` to get `views/blocks/header/__navigation/__search/header__navigation__search`.
 
-####Congurate
+####Configure
 ```javascript
 require.config({
 	...
